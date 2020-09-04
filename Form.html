@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            .text1{
+                text-align: right;
+                color: blue;
+            }
+            .text2{
+                color: red;
+            }
+            .text3{
+                background-color: orange;
+                table-layout: fixed;
+                padding: 15px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <Table>
+            <form action="Form" method="POST">
+            <tr>
+        <th><caption class="text3">SỞ THÍCH CỦA BẠN</caption></th>
+            </tr>
+        <tr>
+            <td class="text1">Họ và tên</td>
+            <td><input type="text" name="hvt" placeholder="Họ và tên"></td>
+        </tr>
+        <tr>
+            <td class="text1">Email</td>
+            <td><input type="email" name="Email" placeholder="Email" required></td>
+        </tr>
+        <tr>
+            <td class="text1">Sở thích</td>
+            <td class="text2"><input type="checkbox" name="hobby"> Thể thao</td>
+            <td class="text2"><input type="checkbox" name="hobby">Âm nhạc</td>
+            <td class="text2"><input type="checkbox" name="hobby">Đọc sách</td>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="text2"><input type="checkbox" name="hobby">Lướt web</td>
+            <td class="text2"><input type="checkbox" name="hobby">Chơi game</td>
+            <td class="text2"><input type="checkbox" name="hobby">Điện ảnh</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="text2"><input type="checkbox" name="hobby">Du lịch</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" name="sb" value="Gửi thông tin"></td>
+            <td><input type="reset" name="rs" value="Nhập lại"></input></td>
+        </tr>    
+        </table>
+    </form>
+        </body>
+        </html>
