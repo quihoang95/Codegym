@@ -1,0 +1,52 @@
+<html>
+    <head>BÀI TẬP ỨNG DỤNG MÁY TÍNH</head>
+    <body>
+        <form action="" method="">
+            <table>
+                <tr>
+                    <td><input type="number" id="o1"></td>
+                    <td><input type="number" id=o2></td>
+                </tr>
+            </table>
+            <button type="button" onclick="click1()">Addition(+)</button>
+            <button type="button" onclick="click2()">Subtraction(-)</button>
+            <button type="button" onclick="click3()">Multiplication(X)</button>
+            <button type="button" onclick="click4()">Division(/)</button>
+            <div id="KQ"></div>
+        </form>
+        <script>
+            function click1(){
+            var gt1= document.getElementById("o1").value;
+            var gt2 = document.getElementById("o2").value;
+            var a = parseInt(gt1);
+            var b = parseInt (gt2);
+            var Add = a + b;
+            document.getElementById("KQ").innerHTML = "Addition:"+Add;
+            }
+            function click2(){
+                var gt1 = document.getElementById("o1").value;
+                var gt2 = document.getElementById("o2").value;
+                var a = parseInt(gt1);
+                var b = parseInt(gt2);
+                var Sub = a - b;
+                document.getElementById("KQ").innerHTML = "Subtraction:" + Sub;
+            }
+            function click3(){
+                var gt1 = document.getElementById("o1").value;
+                var gt2 = document.getElementById("o2").value;
+                var a = parseInt(gt1);
+                var b = parseInt(gt2);
+                var Multi = a*b;
+                document.getElementById("KQ").innerHTML = "Multiplication:" +Multi;
+            }
+            function click4(){
+                var gt1 = document.getElementById("o1").value;
+                var gt2 = document.getElementById("o2").value;
+                var a = parseInt(gt1);
+                var b = parseInt(gt2);
+                var Div = a/b;
+                document.getElementById("KQ").innerHTML = "Division:" + Div;
+            }
+        </script>
+    </body>
+</html>

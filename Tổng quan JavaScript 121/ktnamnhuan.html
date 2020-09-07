@@ -1,0 +1,41 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var year = parseInt(prompt("Enter a year"));
+            // var isLeapyear = false;
+            // if (year % 4 == 0) {
+            //     if(year % 100 == 0){
+            //         if(year % 400 == 0){
+            //            isLeapyear = true;}
+            //         }else {
+            //             isLeapyear = true;
+            //         }
+            //     }
+            // if (isLeapyear){
+            //     alert(year + "is a leap year");
+            // } else {
+            //     alert(year + "is NOT a leap year");
+            // }
+            var isLeapyear = false;
+            var isDivisibleBy4= year % 4 == 0;
+            if(isDivisibleBy4){
+                var isDivisibleBy100 = year % 100 == 0;
+                if(isDivisibleBy100){
+                    var isDivibible400 = year % 400 == 0;
+                    if(isDivibible400){
+                        isLeapyear = true;
+                    }
+                }else{
+                    isLeapyear = true;
+                }
+            }
+            if(isLeapyear){
+                alert (year +" "+"is a leap year");
+            }else{
+                alert (year +" "+ "is a NOT leap year");
+            }
+
+        </script>
+    </body>
+</html>

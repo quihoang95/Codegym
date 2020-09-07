@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>CHUYỂN ĐỔI TIỀN TỆ</title>
+        <style>
+            div{
+                font-family: 'Courier New', Courier, monospace;
+                color: red;
+            }
+            label{
+                font: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form action="" method="">
+            <table>
+                <tr>
+                    <th>Amount</th>
+                    <th>FromCurrency</th>
+                    <th>To Currency</th>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="soluong" id="sotien"></td>
+                    <td> <select name="FromCurrency" id="fc">
+                        <option value="1">Việt Nam</option>
+                        <option value="2">Mỹ</option>
+                    </select></td>
+                    <td><select name="ToCurrency" id="tc">
+                        <option value="1">VND</option>
+                        <option value="2">USD</option>
+                    </select></td>
+                </tr>            
+                <tr>
+                    <td><button type="button" onclick="tiente()">Đổi tiền</button></td>
+                </tr>
+            </table>               
+        </form>
+            <div id="Result"></div>
+    </body>
+    <script>
+        function tiente(){
+            soluong = document.getElementById("sotien").value;
+            c1 = document.getElementById("fc").value;
+            c2 = document.getElementById("tc").value;
+            if (c1==1&& c2==2){
+                document.getElementById("Result").innerHTML = "Result:"+ soluong/23000+ "$";
+            } else if( c1==2&& c2==1) {
+                document.getElementById("Result").innerHTML = "Result:" + soluong*23000 + "VND";
+            } else if (c1==1 && c2==1){
+                document.getElementById("Result").innerHTML = "Result:" + soluong +"VND";
+            } else if (c1==2 && c2==2) {
+                document.getElementById("Result").innerHTML = "Resuld:" + soluong +"USD";
+            }
+               }
+        
+    </script>
+</html>
