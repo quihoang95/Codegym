@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("Input number");
+      let b = +prompt("Input number");
+      swap(a, b);
+      document.write(swap(a, b));
+      function swap(y, z) {
+        let number = y;
+        y = z;
+        z = number;
+        return `${y}${z}`;
+      }
+    </script>
+  </body>
+</html>

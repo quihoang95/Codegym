@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("Nhập độ dài của mảng");
+      let arr = [];
+      for (let i = 0; i < a; i++) {
+        arr[i] = prompt("Nhập phẩn tử");
+      }
+      document.write(arr);
+      let b = prompt("Nhập kí tự:");
+      function checkArr(c) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (c == arr[i]) {
+            count++;
+          }
+        }
+        return count;
+      }
+      let dem = checkArr(b);
+      document.write("Lần xuất hiện:" + dem);
+      if (dem > 0) {
+        alert("Có");
+      } else {
+        alert("-1");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      // let a = parseInt( prompt("a: "));
+      // let b = parseInt( prompt("b: "));
+      // if ((a+b) < 4 ){
+      //     result = 'Below';
+      // }else{
+      //     result = 'Over';
+      // }
+      // result = (a+b < 4) ? 'Below' : 'Over';
+      // alert(result);
+      let login = prompt("Enter your type:", "");
+      let message =
+        login == "Employee"
+          ? "Hello"
+          : login == "Director"
+          ? "Greetings"
+          : login == ""
+          ? "No Login"
+          : "";
+      alert(message);
+    </script>
+  </body>
+</html>

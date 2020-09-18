@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p>
+      <input
+        type="number"
+        oninput="square(this.value)"
+        onchange="square(this.value)"
+        value="Bình phương"
+      />
+    </p>
+    <p>Bình phương: <span id="result"></span></p>
+
+    <script>
+      function square(numbSqr) {
+        numbSqr = parseFloat(numbSqr);
+        document.getElementById("result").innerHTML = numbSqr * numbSqr;
+      }
+    </script> -->
+    <input type="number" id="number" placeholder="Input Number" />
+    <button type="button" onclick="sqr()">Bình phương</button>
+    <div id="result"></div>
+    <script>
+      function sqr() {
+        let a = document.getElementById("number").value;
+        let b;
+        b = a * a;
+        document.getElementById("result").innerHTML = `Result: ${b}`;
+      }
+    </script>
+  </body>
+</html>

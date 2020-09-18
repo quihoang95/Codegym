@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function generateArray(size) {
+        let arr = [];
+        for (let i = 0; i < size; i++) {
+          arr[i] = Math.floor(Math.random() * 90 + 10);
+        }
+        return arr;
+      }
+      function printArray(arr) {
+        return arr.join(",");
+      }
+      function sumArray(arr) {
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+          total += arr[i];
+        }
+        return total;
+      }
+      function totalOdd(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 != 0) {
+            count++;
+          }
+        }
+        return count;
+      }
+      function totalEven(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0) {
+            count++;
+          }
+        }
+        return count;
+      }
+
+      function print(smg) {
+        document.write(smg + "<br>");
+      }
+      function inputSize() {
+        let size = 0;
+        do {
+          size = +prompt("Input size:");
+        } while (!Number.isInteger(size));
+        return size;
+      }
+      function main() {
+
+        let n = 5;
+        for (let i = 0; i < n; i++) {
+          let size = inputSize();
+          let array = generateArray(size);
+          print(`Mảng ${printArray(array)}`);
+          print(`Tổng của mảng ${sumArray(array)}`);
+          print(`Số lẻ trong mảng ${totalOdd(array)}`);
+          print(`Số chẵn trong mảng ${totalEven(array)} <br>`);
+        }
+      }
+      main();
+    </script>
+  </body>
+</html>

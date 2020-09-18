@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let b = [10, 3, 66, 412, 20, 1, 32, 2, 6, 8];
+      let max = b[0];
+      let viTri = 0;
+      for (let i = 1; i < b.length; i++) {
+        if (b[i] > max) {
+          max = b[i];
+          viTri = i;
+        }
+      }
+      document.write(`Max là ${max} tại vị trí ${viTri}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bài 3
+
+      //   let tb = "<table>";
+      //   let row = 6;
+      //   let col = 6;
+      //   Hình 1
+      //   for (let i = 0; i < row; i++) {
+      //     tb += "<tr>";
+      //     for (let j = 1; j <= col; j++) {
+      //       if (j <= i) {
+      //         tb += "<td>*</td>";
+      //       } else {
+      //         tb += "<td> </td>";
+      //       }
+      //       //   tb += `<td>${j <= i ? "*" : " "}<td/>`;
+      //     }
+      //     tb += "</tr>";
+      //   }
+      //   tb += "</table>";
+      //   document.write(tb);
+      //   Hình 2
+      // for (let i = 0; i < row; i++) {
+      //   tb += "<tr>";
+      //   for (let j = 1; j <= col; j++) {
+      //     if (j <= col - i) {
+      //       tb += "<td>*</td>";
+      //     } else {
+      //       tb += "<td> </td>";
+      //     }
+      //     //   tb += `<td>${j <= i ? "*" : " "}<td/>`;
+      //   }
+      //   tb += "</tr>";
+      // }
+      // tb += "</table>";
+      // document.write(tb);
+      // Hình 3
+      // for (let i = 0; i < row; i++) {
+      //   tb += "<tr>";
+      //   for (let j = 1; j <= col; j++) {
+      //     if (j <= row- i) {
+      //       tb += "<td> </td>";
+      //     } else {
+      //       tb += "<td>*</td>";
+      //     }
+
+      //   }
+      //   tb += "</tr>";
+      // }
+      // tb += "</table>";
+      // document.write(tb);
+      //   Hình 4
+
+      //   for (let j = 1; j < row; j++) {
+      //     tb += "<tr>";
+      //     for (let i = 0; i <= col; i++) {
+      //       if (j < i) {
+      //         tb += "<td>*</td>";
+      //       } else {
+      //         tb += "<td> </td>";
+      //       }
+      //     }
+      //     tb += "</tr>";
+      //   }
+
+      //   tb += "</table>";
+      //   document.write(tb);
+      // Bài 4
+      let tb = "<table>";
+      let row = 10;
+      let col = 20;
+      for (let i = 0; i <= row; i++) {
+        tb += "<tr>";
+        for (let j = 0; j <= col; j++) {
+          if (i == 0 || i == row) {
+            tb += "<td>*</td>";
+          } else if (j == 0 || j == col) {
+            tb += "<td>*</td>";
+          } else tb += "<td> </td>";
+        }
+        tb += "</tr>";
+      }
+      tb += "</table>";
+      document.write(tb);
+    </script>
+  </body>
+</html>

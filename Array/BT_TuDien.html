@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="nhapvao" />
+    <button onclick="tratu()">dich</button>
+    <div id="result"></div>
+    <script>
+      let ta = new Array("motor bike", "car", "football", "pencil");
+      let tv = new Array("xe máy", "xe ô tô", "bóng đá", "bút chì");
+      let inPut;
+      let dichTV;
+      let trungGian;
+      function tratu() {
+        let inPut = document.getElementById("nhapvao").value;
+
+        for (let i = 0; i < ta.length; i++) {
+          if (inPut == ta[i]) {
+            trungGian = i;
+            dichTV = tv[i];
+            break;
+          
+          } else {
+          dichTV = "Không tìm thấy"; 
+        }
+        }
+        document.getElementById("result").innerHTML = dichTV;
+      
+      }
+    </script>
+  </body>
+</html>

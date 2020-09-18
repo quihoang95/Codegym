@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      let arr2 = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+
+      let outputArr2;
+      let stars = prompt("Input your stars:");
+      findStars(stars);
+      function findStars(stars) {
+        for (let i = 0; i < arr1.length; i++) {
+          if (stars == arr1[i]) {
+            outputArr2 = arr2[i];
+            break;
+          } else {
+            outputArr2 = "Không tìm thấy";
+          }
+        }
+      }
+      document.write(outputArr2);
+    </script>
+  </body>
+</html>

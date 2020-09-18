@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="number" />
+    <button type="button" onclick="calFactorial()">Factorial</button>
+    <div id="result"></div>
+    <script>
+      function calFactorial() {
+        let f = 1;
+        let num = document.getElementById("number").value;
+        for (let i = 1; i <= num; i++) {
+          f *= i;
+        }
+        document.getElementById("result").innerHTML = f;
+      }
+    </script>
+  </body>
+</html>

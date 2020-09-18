@@ -1,0 +1,81 @@
+<html>
+  <head></head>
+  <style>
+    img {
+      width: 800px;
+      height: 150px;
+    }
+  </style>
+  <body>
+    <button>
+      <img
+        src="./Picture/Puzzle/cat1.jpg"
+        onclick="click1(this, this.id)"
+        id="anh1"
+      />
+    </button>
+    <button>
+      <img
+        src="./Picture/Puzzle/cat2.jpg"
+        onclick="click1(this, this.id)"
+        id="anh2"
+      />
+    </button>
+    <button>
+      <img
+        src="./Picture/Puzzle/cat3.jpg"
+        onclick="click1(this, this.id)"
+        id="anh3"
+      />
+    </button>
+    <button>
+      <img
+        src="./Picture/Puzzle/cat4.jpg"
+        onclick="click1(this, this.id)"
+        id="anh4"
+      />
+    </button>
+    <button>
+      <img
+        src="./Picture/Puzzle/cat5.jpg"
+        onclick="click1(this, this.id)"
+        id="anh5"
+      />
+    </button>
+
+    <script>
+      let a = ["cat1.jpg", "monkey1.jpg", "panda1.jpg"];
+      let b = ["cat2.jpg", "monkey2.jpg", "panda2.jpg"];
+      let c = ["cat3.jpg", "monkey3.jpg", "panda3.jpg"];
+      let d = ["cat4.jpg", "monkey4.jpg", "panda4.jpg"];
+      let e = ["cat5.jpg", "monkey5.jpg", "panda5.jpg"];
+
+      function click1(img, i) {
+        console.log(img);
+        console.log(i);
+
+        switch (i) {
+          case "anh1":
+            img.src = "/Picture/Puzzle/" + a[Math.floor(Math.random() * 3)];
+            break;
+
+          case "anh2":
+            img.src = "/Picture/Puzzle/" + b[Math.floor(Math.random() * 3)];
+            break;
+
+          case "anh3":
+            img.src = "/Picture/Puzzle/" + c[Math.floor(Math.random() * 3)];
+            break;
+
+          case "anh4":
+            img.src = "/Picture/Puzzle/" + d[Math.floor(Math.random() * 3)];
+            break;
+
+          case "anh5":
+            img.src = "/Picture/Puzzle/" + e[Math.floor(Math.random() * 3)];
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

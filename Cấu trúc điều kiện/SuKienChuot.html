@@ -1,0 +1,113 @@
+<html>
+  <head></head>
+  <body onload="car()">
+    <!-- <form action="" method="GET">
+            <img src="Picture/Ball.jpg" id="myImage" width="50px" height="50px"/>
+            <p>Click button below to move the image to right</p>
+            <input type="button" value="Click Me" onclick="moveRight();"/>
+        </form>
+        <script>
+            let imgObj = null;
+            imgObj = document.getElementById('myImage');
+            function init(){
+                imgObj = document.getElementById('myImage');
+                imgObj.style.position = 'relative';
+                imgObj.style.left = '0px';
+            }
+            function moveRight(){
+                imgObj.style.left = parseInt(imgObj.style.left) + 10 + "px";
+            } -->
+    <!-- window.onload = init; -->
+    <img src="./Picture/right.jpg" id="scar" />
+    <table style="position: fixed; left: 0px; top: 200px">
+      <tr>
+        <td></td>
+        <td><button onclick="goUp()">&#8593;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button onclick="goRight()">&#8592;</button></td>
+        <td><button onclick="goDown()">&#8595;</button></td>
+        <td><button onclick="goLeft()">&#8594;</button></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    function car() {
+      var car = document.getElementById("scar");
+      car.style.width = "200px";
+      car.style.height = "100px";
+      car.style.position = "relative";
+      car.style.left = "0";
+      car.style.right = "0";
+      window.addEventListener("keydown", controllCar);
+    }
+    function goRight() {
+      var car = document.getElementById("scar");
+      car.src = "Picture/right.jpg";
+      car.style.width = "200px";
+      car.style.height = "100px";
+      var carWidth = parseInt(car.style.width);
+      if (parseInt(car.style.left) + carWidth + 10 < window.innerWidth) {
+        car.style.left = parseInt(car.style.left) + 10 + "px";
+      } else {
+        car.style.left = window.innerWidth - carWidth - 10 + "px";
+      }
+    }
+    function goLeft() {
+      var car = document.getElementById("scar");
+      car.src = "Picture/left.jpg";
+      car.style.width = "200px";
+      car.style.height = "100px";
+      if (parseInt(car.style.left) > 0) {
+        car.style.left = parseInt(car.style.left) - 10 + "px";
+      } else {
+        car.style.left = "0px";
+      }
+    }
+    function goUp() {
+      var car = document.getElementById("scar");
+      car.src = "Picture/up.jpg";
+      car.style.width = "100px";
+      car.style.height = "200px";
+      if (parseInt(car.style.top) > 0) {
+        car.style.top = parseInt(car.style.top) - 10 + "px";
+      } else {
+        car.style.top = "0px";
+      }
+    }
+    function goDown() {
+      var car = document.getElementById("scar");
+      car.src = "Picture/down.jpg";
+      car.style.width = "100px";
+      car.style.height = "200px";
+
+      var carHeight = parseInt(car.style.height);
+      if (parseInt(car.style.top) + carHeight + 10 < window.innerHeight) {
+        car.style.top = parseInt(car.style.top) + 10 + "px";
+      } else {
+        car.style.top = 200 - carHeight - 10 + "px";
+      }
+    }
+    function controllCar(evt) {
+      switch (evt.keyCode) {
+        case 39: {
+          goRight();
+          break;
+        }
+        case 37: {
+          goLeft();
+          break;
+        }
+        case 40: {
+          goDown();
+          break;
+        }
+        case 38: {
+          goUp();
+          break;
+        }
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="number" name="" id="gt" />
+    <button type="button" onclick="kq()">Kết quả</button>
+    <div id="result"></div>
+    <script>
+      function kq() {
+        //   Bài 1 Chuyển độ C sang F
+        //     let C = document.getElementById("gt").value;
+        //     let F = (9 / 5) * C + 32;
+        //     document.getElementById("result").innerHTML = F;
+        // Bài 2 Chuyển M sang Ft
+        // let m = document.getElementById("gt").value;
+        // let ft = m * 3.2808;
+        // document.getElementById("result").innerHTML = ft + "feet";
+        // Bài 3 Tính diện tích hình vuông
+        let hv = document.getElementById("gt").value;
+        let dt = hv * hv ;
+        
+        document.getElementById("result").innerHTML= "Diện tích =" + dt; -->
+    <!-- }
+    </script> -->
+
+    <!-- Bài 4 Tính diện tích hình chữ nhật -->
+    <!-- <input type="number" name="" id="cd" />
+    <input type="number" name="" id="cr" />
+    <button type="button" onclick="kq()">Kết quả</button>
+    <div id="result"></div>
+    <script>
+      function kq() {
+        let a = document.getElementById("cd").value;
+        let b = document.getElementById("cr").value;
+        let dt = a * b;
+        document.getElementById("result").innerHTML = "Diện tích =" + dt ;
+      }
+    </script> -->
+    <!-- Bài 5 Diện tích tam giác vuông -->
+    <!-- <input type="number" name="" id="cd" />
+    <input type="number" name="" id="cr" />
+    <button type="button" onclick="kq()">Kết quả</button>
+    <div id="result"></div>
+    <script>
+      function kq() {
+        let a = document.getElementById("cd").value;
+        let b = document.getElementById("cr").value;
+        let dt = (a/2) * b;
+        document.getElementById("result").innerHTML = "Diện tích =" + dt ;
+      }
+    </script> -->
+    <!-- Bài 6 Giải phương trình bậc 1 -->
+    <!-- <input type="text" name="" id="a" />
+    <input type="text" name="" id="b" />
+    <button type="button" onclick="kq()">Kết Quả</button>
+    <div id="result"></div>
+    <script>
+      function kq() {
+        let soA = document.getElementById("a").value;
+        let soB = document.getElementById("b").value;
+        let x = -soB / soA;
+        if (soA == 0 && soB == 0) {
+          document.getElementById("result").innerHTML =
+            "Phương trình có vô số nghiệm";
+        } else if ((soA = 0 & (soB != 0))) {
+          document.getElementById("result").innerHTML =
+            "Phương trình vô nghiệm";
+        } else soA != 0;
+        document.getElementById("result").innerHTML =
+          "Phương trình có nghiệm:" + x;
+      }
+    </script> -->
+    <!-- Bài 7 Giải phương trình bậc 2 -->
+    <!-- <label for="">Nhập A</label>
+    <input type="text" name="" id="a" placeholder="Nhập A" />
+    <label for="">Nhập B</label>
+    <input type="text" name="" id="b" placeholder="Nhập B" />
+    <label for="">Nhập C</label>
+    <input type="text" name="" id="c" placeholder="Nhập C" />
+    <button type="button" onclick="kq()">Kết Quả</button>
+    <div id="result"></div>
+    <script>
+      function kq() {
+        let soA = +document.getElementById("a").value;
+        let soB = +document.getElementById("b").value;
+        let soC = +document.getElementById("c").value;
+        let delta = (soB * soB) - (4 * soA) * soC;
+        let x1 = (-soB + Math.sqrt(delta)) / (2 * soA);
+        let x2 = (-soB - Math.sqrt(delta)) / (2 * soA);
+        console.log(delta);
+        if (delta < 0) {
+          document.getElementById("result").innerHTML =
+            "Phương trình vô nghiệm";
+        } else if (delta = 0) {
+          document.getElementById("result").innerHTML =
+            "Phương trình có nghiệm kép: " + "x1=x2=" + (-soB / (2 * soA));
+        } else{
+          console.log("2 nghiem");
+          document.getElementById("result").innerHTML =
+            "Phương trình có 2 nghiệm:" + "x1=" + x1 + "x2" + x2;
+        }
+      
+    }
+    </script> -->
+    <!-- Bài 8 -->
+    <!-- <input type="text" id="tuoi" />
+    <button type="button" onclick="kq()">Kết Quả</button>
+    <div id="result"></div>
+
+    <script>
+      function kq() {
+        let y = +document.getElementById("tuoi").value;
+        if (y < 0 || y > 120) {
+          document.getElementById("result").innerHTML =
+            "Đây ko phải là tuổi của người";
+        } else {
+          document.getElementById("result").innerHTML = "Đây là tuổi của người";
+        }
+      } -->
+
+    <!-- // let y = +prompt("Nhập số tuổi:");
+      // if (y<0 && y>120){
+      //   alert("Đây không phải là tuổi của người");
+      // }else{
+      //   alert("Đây là tuổi của người");
+      // } -->
+    <!-- </script> -->
+    <!-- Bài 9 -->
+    <!-- <script>
+      let a = parseInt(prompt("Nhập a:"));
+      let b = parseInt(prompt("Nhập b:"));
+      let c = parseInt(prompt("Nhập c:"));
+      if ((a, b, c > 0 && a + b > c && b + c > a && a + c > b)) {
+        alert("a,b,c là cạnh của tam giác");
+      } else {
+        alert("a,b,c không phải là cạnh của một tam giác");
+      }
+    </script> -->
+    <!-- Bài 10: Tính giá tiền điện -->
+    <!-- <input type="text" id="kWh" placeholder="Nhập số kWh" />
+    <input type="button" value="Kết quả" onclick="kq()" />
+    <div id="result"></div>
+    <script>
+      function kq() {
+        let x = document.getElementById("kWh").value;
+        let b1 = 1484;
+        let b2 = 1533;
+        let b3 = 1786;
+        let b4 = 2242;
+        let b5 = 2503;
+        let b6 = 2587;
+        if (x <= 50) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Tổng tiền điện tính theo bậc 1 ${x * b1} VND`;
+        }
+
+        if (x > 50 && x <= 100) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Tổng tiền điện tính theo bậc 2 ${x * b2}VND`;
+        }
+        if (x > 100 && x <= 200) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Tổng tiền điện tính theo bậc 3 ${x * b3}VND`;
+        }
+        if (x > 200 && x <= 300) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Tổng tiền điện tính theo bậc 4 ${x * b4}VND`;
+        }
+        if (x > 300 && x <= 400) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Tổng tiền điện tính theo bậc 5 ${x * b5}VND`;
+        }
+        if (x > 400) {
+          document.getElementById(
+            "result"
+          ).innerHTML = `Tổng tiền điện tính theo bậc 6 ${x * b6}VND`;
+        }
+      }
+    </script> -->
+  
+  </body>
+</html>
