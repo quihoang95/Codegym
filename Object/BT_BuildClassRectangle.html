@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="100px"
+      height="50px"
+      style="border: 1px solid green"
+    ></canvas>
+    <script>
+      let Rec = function (x,y,length, width) {
+        this.x=x;
+        this.y=y;
+        this.length = length;
+        this.width = width;
+        this.getLength = function () {
+          return this.length;
+        };
+        this.getWidth = function () {
+          return this.width;
+        };
+        this.getPerimeter = function () {
+          return 2 * (length + width);
+        };
+        this.getAcreage = function () {
+          return length * width;
+        };
+        this.getCanvas = function(){
+          let ctx = document.getElementById("myCanvas").getContext("2d");
+          ctx.beginPath();
+          ctx.fillStyle = "blue";
+          ctx.rect(this.x,this.y,this.length,this.width);
+          ctx.fill();
+        }
+      };
+      let rec = new Rec(20,20,30,15 );
+      rec.getCanvas();
+      let perimeter = rec.getPerimeter();
+      let acreage = rec.getAcreage();
+      document.write(`Acreage:${acreage} Perimeter:${perimeter}`);
+    </script>
+  </body>
+</html>

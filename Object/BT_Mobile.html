@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table width="80%">
+      <th>Nokia</th>
+      <th>Iphone</th>
+      <tr>
+        <td>
+          <textarea name="" id="textingNokia" cols="30" rows="10"></textarea>
+          <input type="button" onclick="sendNokia()" value="Sent" />
+          <input type="button" onclick="receiveNokia()" value="Receive" />
+        </td>
+        <td>
+          <textarea name="" id="textingIphone" cols="30" rows="10"></textarea>
+          <input type="button" onclick="sendIphone()" value="Sent" />
+          <input type="button" onclick="receiveIphone()" value="Receive" />
+        </td>
+      </tr>
+    </table>
+    <script>
+      function sendNokia() {
+        let messNokia = document.getElementById("textingNokia").value;
+        Nokia.texting(messNokia);
+        document.getElementById("textingNokia").value = "";
+        Nokia.sent(Iphone);
+      }
+      function receiveNokia() {
+        document.getElementById("textingNokia").value = Nokia.checkInbox();
+      }
+
+      function sendIphone() {
+        let messIphone = document.getElementById("textingIphone").value;
+        Iphone.texting(messIphone);
+        document.getElementById("textingIphone").value = "";
+        Iphone.sent(Nokia);
+      }
+      function receiveIphone() {
+        document.getElementById("textingIphone").value = Iphone.checkInbox();
+      }
+
+      function Mobile(_sim) {
+        this.sim = _sim;
+        this.batterry = 0;
+        this.messenger = "";
+        this.draft = [];
+        this.inbox = [];
+        this.send = [];
+        this.status = true;
+        //Kiểm tra trạng thái
+        this.checkStatus = function () {
+          return this.status;
+        };
+        //Kiểm tra bật tắt
+        this.onOff = function () {
+          if (this.status == true) {
+            this.status = false;
+            alert("Mobile is on");
+          }
+          if (this.status == false && this.batterry <= 0) {
+            this.status = true;
+            alert("Mobile if off");
+          }
+        };
+        //Sạc pin
+        this.chargeBattery = function () {
+          return (this.batterry = 100);
+        };
+        //Soạn tin nhắn
+        this.texting = function (messenger) {
+          this.messenger = messenger;
+          this.draft.push(messenger);
+          this.batterry--;
+          return this.draft;
+        };
+        //Nhận tin nhắn
+        this.receive = function (messenger) {
+          let arr = this.inbox.push(messenger);
+          this.batterry--;
+          return this.inbox;
+        };
+        //Gửi tin nhắn
+        this.sent = function (name) {
+          name.inbox.push(this.messenger);
+          this.batterry--;
+          return this.send;
+        };
+        //Xem tin đã gửi
+        this.checkSend = function () {
+          this.batterry--;
+          return this.send;
+        };
+        //Xem tin đã nhận
+        this.checkInbox = function () {
+          this.batterry--;
+          return this.inbox;
+        };
+      }
+      let Nokia = new Mobile();
+      let Iphone = new Mobile();
+    </script>
+  </body>
+</html>

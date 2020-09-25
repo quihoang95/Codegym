@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="1368px"
+      height="768px"
+      style="border: 1px solid #d3d3d3"
+    ></canvas>
+    <script>
+      function Circle(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+      }
+      function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+      }
+      function getRandomColor() {
+        var red = getRandomHex();
+        var blue = getRandomHex();
+        var green = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+      }
+      function createCircle0() {
+        var ctx0 = document.getElementById("myCanvas").getContext("2d");
+        var circle0 = new Circle(500, 500, 80);
+        ctx0.beginPath();
+        ctx0.arc(circle0.x, circle0.y, circle0.radius, 0, 2 * Math.PI);
+        ctx0.fill();
+      }
+      createCircle0();
+
+      function createCircle1() {
+        var ctx1 = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 80);
+        var color = getRandomColor();
+        var circle1 = new Circle(200, 300, radius);
+        ctx1.beginPath();
+        ctx1.arc(circle1.x, circle1.y, circle1.radius, 0, 2 * Math.PI);
+        ctx1.fillStyle = color;
+        ctx1.fill();
+      }
+      createCircle1();
+
+      function createCircle2() {
+        var ctx2 = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 80);
+        var color1 = getRandomColor();
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        var circle2 = new Circle(x, y, radius);
+        ctx2.beginPath();
+        ctx2.arc(circle2.x, circle2.y, circle2.radius, 0, 2 * Math.PI);
+        ctx2.fillStyle = color1;
+        ctx2.fill();
+      }
+      createCircle2();
+      createCircle2();
+      createCircle2();
+      createCircle2();
+      createCircle2();
+      createCircle2();
+      createCircle2();
+      createCircle2();
+      createCircle2();
+      function createMultipleCircle(){
+        for(let i =0;i<30;i++){
+          createCircle2();
+        }
+      }
+      createMultipleCircle();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Apple() {
+        this.weight = 10;
+        this.decrease = function () {
+          if (this.weight > 0) {
+            this.weight--;
+          }
+        };
+        this.isEmpty = function () {
+          if (this.weight > 0) {
+            this.isEmpty = true;
+          } else this.isEmpty = false;
+        };
+        this.getWeight = function () {
+          return this.isEmpty();
+        };
+      }
+      function Human() {
+        this.name;
+        this.gender;
+        this.weight;
+        this.isMale = function () {
+          return this.gender;
+        };
+        this.setGender = function (boolean) {
+          if ((this.gender = boolean)) {
+            return (this.gender = "Nam");
+          } else return (this.gender = "Nữ");
+        };
+        this.checkApple = function (apple) {
+          apple.isEmpty();
+        };
+        this.eat = function (apple) {
+          apple.decrease();
+          this.weight++;
+        };
+        this.say = function (say) {
+          this.say = say;
+        };
+        this.getName = function () {
+          return this.name;
+        };
+        this.setName = function (name) {
+          this.name = name;
+        };
+        this.getWeight = function () {
+          return this.weight;
+        };
+        this.setWeight = function (weight) {
+          this.weight = weight;
+        };
+      }
+      let adam = new Human();
+      adam.setName("adam");
+      adam.setWeight("60");
+      adam.setGender(true);
+      document.write(`Tên:${adam.getName()}<br/>Cân nặng:${adam.getWeight()}<br/>Giới tính:${adam.gender}<br/>`);
+      let apple = new Apple();
+      adam.eat(apple);
+      adam.checkApple(apple);
+      document.write(`Cân nặng sau khi ăn: ${adam.weight}<br/> Số lượng táo còn lại: ${apple.weight}<br/>`)
+
+      let eva = new Human();
+      eva.setName("eva");
+      eva.setWeight("45");
+      eva.setGender(false);
+      document.write(`Tên:${eva.getName()}<br/>Cân nặng:${eva.getWeight()}<br/>Giới tính:${eva.gender}<br/>`);
+      let apple2 = new Apple();
+      eva.eat(apple2);
+      eva.checkApple(apple2);
+      document.write(`Cân nặng sau khi ăn: ${eva.weight}<br/> Số lượng táo còn lại: ${apple2.weight}`)
+      
+      
+     
+    </script>
+  </body>
+</html>

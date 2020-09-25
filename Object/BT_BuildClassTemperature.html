@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Temperature(C) {
+        if (C >= -273) {
+          this.changeToF = function () {
+            return (F = C * 1.8 + 32);
+          };
+          this.changeToK = function () {
+            return (K = C + 273.15);
+          };
+        } else {
+          alert("Không đủ nhiệt độ");
+        }
+      }
+      let temperature = new Temperature(25);
+      let f = temperature.changeToF();
+      let k =temperature.changeToK();
+      document.write(`Độ F =${f} Độ K=${k}`);
+    </script>
+  </body>
+</html>
