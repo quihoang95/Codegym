@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function capitalize(str) {
+    str = str.trim().toLowerCase();
+    let chart = str.split("");
+    let newstr = [];
+    for (let i = 0; i < chart.length; i++) {
+      if (chart[i] == " " && chart[i + 1] == " ") continue;
+      newstr += chart[i];
+    }
+    newstr = newstr.split("");
+    for (let i = 0; i < newstr.length; i++) {
+      if (i == 0) {
+        newstr[i] = newstr[i].toUpperCase();
+      }
+      if (newstr[i] == " ") {
+        newstr[i + 1] = newstr[i + 1].toUpperCase();
+      }
+    }
+    return newstr.join("");
+  }
+  let str1 = "  LẬP   trình  viên";
+  let str2 = "lập TRÌNH   VIên";
+  document.write(capitalize(str1+"<br/>")); 
+  document.write(capitalize(str2));
+</script>

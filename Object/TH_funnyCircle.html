@@ -36,45 +36,45 @@
       }
       createCircle0();
 
-      function createCircle1() {
-        var ctx1 = document.getElementById("myCanvas").getContext("2d");
-        var radius = Math.floor(Math.random() * 80);
-        var color = getRandomColor();
-        var circle1 = new Circle(200, 300, radius);
-        ctx1.beginPath();
-        ctx1.arc(circle1.x, circle1.y, circle1.radius, 0, 2 * Math.PI);
-        ctx1.fillStyle = color;
-        ctx1.fill();
-      }
-      createCircle1();
+      // function createCircle1() {
+      //   var ctx1 = document.getElementById("myCanvas").getContext("2d");
+      //   var radius = Math.floor(Math.random() * 80);
+      //   var color = getRandomColor();
+      //   var circle1 = new Circle(200, 300, radius);
+      //   ctx1.beginPath();
+      //   ctx1.arc(circle1.x, circle1.y, circle1.radius, 0, 2 * Math.PI);
+      //   ctx1.fillStyle = color;
+      //   ctx1.fill();
+      // }
+      // createCircle1();
 
-      function createCircle2() {
-        var ctx2 = document.getElementById("myCanvas").getContext("2d");
-        var radius = Math.floor(Math.random() * 80);
-        var color1 = getRandomColor();
-        var x = Math.random() * window.innerWidth;
-        var y = Math.random() * window.innerHeight;
-        var circle2 = new Circle(x, y, radius);
-        ctx2.beginPath();
-        ctx2.arc(circle2.x, circle2.y, circle2.radius, 0, 2 * Math.PI);
-        ctx2.fillStyle = color1;
-        ctx2.fill();
-      }
-      createCircle2();
-      createCircle2();
-      createCircle2();
-      createCircle2();
-      createCircle2();
-      createCircle2();
-      createCircle2();
-      createCircle2();
-      createCircle2();
-      function createMultipleCircle(){
-        for(let i =0;i<30;i++){
-          createCircle2();
-        }
-      }
-      createMultipleCircle();
+      // function createCircle2() {
+      //   var ctx2 = document.getElementById("myCanvas").getContext("2d");
+      //   var radius = Math.floor(Math.random() * 80);
+      //   var color1 = getRandomColor();
+      //   var x = Math.random() * window.innerWidth;
+      //   var y = Math.random() * window.innerHeight;
+      //   var circle2 = new Circle(x, y, radius);
+      //   ctx2.beginPath();
+      //   ctx2.arc(circle2.x, circle2.y, circle2.radius, 0, 2 * Math.PI);
+      //   ctx2.fillStyle = color1;
+      //   ctx2.fill();
+      // }
+      // createCircle2();
+      // createCircle2();
+      // createCircle2();
+      // createCircle2();
+      // createCircle2();
+      // createCircle2();
+      // createCircle2();
+      // createCircle2();
+      // createCircle2();
+      // function createMultipleCircle(){
+      //   for(let i =0;i<30;i++){
+      //     createCircle2();
+      //   }
+      // }
+      // createMultipleCircle();
 
     </script>
   </body>

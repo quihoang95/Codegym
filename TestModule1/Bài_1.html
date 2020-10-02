@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+  </head>
+  <body></body>
+  <script>
+    let arr = new Array();
+    function genarateArray(size) {
+      for (let i = 0; i < size; i++) {
+        arr[i] = Math.floor(Math.random() * 80 + 10);
+      }
+    }
+    function printArray(arr) {
+      document.write(arr.join("-"));
+    }
+    function find(value, arr) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == value) {
+          return i;
+        }
+      }
+      return "-1";
+    }
+    function removeArr(value, arr) {
+      if (find(value, arr) != -1) {
+        alert("Có trong mảng");
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == value) {
+            arr.splice(i, 1);
+            i--;
+          }
+        }
+      } else alert("Không có trong mảng");
+    }
+    function main() {
+      let input = +prompt("Input:");
+      while (!Number.isInteger(input)) {
+        input = +prompt("Input:");
+      }
+      genarateArray(input);
+      printArray(arr);
+      let value = prompt("Value:");
+      removeArr(value, arr);
+      printArray(arr);
+    }
+    main();
+  </script>
+</html>
