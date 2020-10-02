@@ -62,27 +62,24 @@ a:hover {
 }
 /*Body*/
 /* Column container */
-.row {  
+.row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  
 }
-
 
 /* Sidebar/left column */
 .side {
   -ms-flex: 30%; /* IE10 */
   flex: 30%;
   /* background-color:yellow; */
-  background-image: url(/img/brackgroun.png);
+  background-image: url(/img/background.jpg);
   padding: 10px;
   overflow: auto;
 }
 
-
-.main {   
+.main {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
   background-color: yellowgreen;
@@ -93,77 +90,55 @@ a:hover {
   width: 100%;
   padding: 10px;
 }
-.slider img{
+.slider img {
   width: 100%;
   height: 200px;
-  
 }
 .slides {
   width: 100%;
   height: 70%;
 }
-.slide1{
+.slide1 {
   position: relative;
 }
-.slide1 .prev{
+.slide1 .prev {
   position: absolute;
-  top:50%;
+  top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
-.slide1 .next{
+.slide1 .next {
   position: absolute;
-  top:50%;
+  top: 50%;
   right: 0;
   transform: translateY(-50%);
-
 }
 
-a img{
+a img {
   width: 30px;
   height: 30px;
-  
 }
-h1{
+h1 {
   padding: 20px;
-  color:crimson;
+  color: crimson;
 }
-h2{
+h2 {
   color: brown;
 }
-p{
+p {
   padding: 10px;
   font-size: 25px;
   color: brown;
 }
-h3{
+h3 {
   color: crimson;
 }
-h4{
-  font-family: 'Courier New';
+h4 {
+  font-family: "Courier New";
   color: red;
   font-size: 25px;
 }
-/* Footer */
-.footer {
-  /* padding: 25px; */
-  text-align: center;
-  background: green;
-  width: 100%;
-  height: 70px;
-}
-.footer ul li{
-  float: left;
-  width: 20%;
-  line-height: 70px;
-}
-.footer ul li a{
-  background-color: none;
-  color: black;
-  text-align: center;
-  font: bolder;
-  font-size: 20px;
-}
+
 
 
 
@@ -182,6 +157,7 @@ h4{
   .checkbtn {
     display: block;
   }
+
   ul {
     position: fixed;
     width: 100%;
@@ -210,12 +186,11 @@ h4{
   }
 }
 @media screen and (max-width: 700px) {
-  .row {   
+  .row {
     flex-direction: column;
   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
